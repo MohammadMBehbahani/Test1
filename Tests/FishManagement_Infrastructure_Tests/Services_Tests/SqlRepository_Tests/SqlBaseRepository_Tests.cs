@@ -1,14 +1,16 @@
-﻿using FishManagement_Domain.Entities;
+﻿
+
+
 
 namespace FishManagement_Infrastructure_Tests.Services_Tests.SqlRepository_Tests;
 
 [TestFixture]
 public class SqlBaseRepository_Tests
 {
-    private readonly ISqlBaseRepository sqlBaseRepository;
+    private readonly ISqlBaseRepository<Tank> sqlBaseRepository;
     public SqlBaseRepository_Tests()
     {
-        sqlBaseRepository = new SqlBaseRepository();
+        sqlBaseRepository = new SqlBaseRepository<Tank>();
     }
     [Test]
     public void AddEntityAsync_CreateTankEntityFromDataBase_GetsTankDbWithSameId()

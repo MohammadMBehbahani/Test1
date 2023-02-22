@@ -17,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Src\FishManagement_Application\FishManagement_Application.csproj" />
     <ProjectReference Include="..\..\Src\FishManagement_Domain\FishManagement_Domain.csproj" />
+    <ProjectReference Include="..\..\Src\FishManagement_Infrastructure\FishManagement_Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

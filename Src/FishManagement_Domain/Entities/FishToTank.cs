@@ -15,6 +15,10 @@ public class FishToTank : BaseEntity
         CheckTankIdValidation( tankId);
         CheckFishIdValidation( fishId);
     }
+    private FishToTank()
+    {
+
+    }
     #endregion
     #region Relations
     public Tank? Tank { get; set; }

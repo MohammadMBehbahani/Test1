@@ -3,14 +3,18 @@
 public class Fish : BaseEntity
 {
     #region Properties
-    public string? FishType { get;private  set; }
+    public string? FishType { get; private set; }
     public double FishFoodWeight { get; private set; }
     #endregion
     #region Builder
-    public Fish(string fishType,double foodweight)
+    public Fish(string fishType, double foodweight)
     {
         CheckFishTypeValidation(fishType);
-        CheckFoodWeightValidation( foodweight);
+        CheckFoodWeightValidation(foodweight);
+    }
+    private Fish()
+    {
+
     }
     #endregion
     #region Methods
@@ -27,6 +31,7 @@ public class Fish : BaseEntity
         this.FishFoodWeight = foodWeight;
     }
     #endregion
-
-
+    #region Relations
+    public IList<FishToTank> FishToTanks { get; set; }
+    #endregion
 }

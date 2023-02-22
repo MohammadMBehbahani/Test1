@@ -14,6 +14,10 @@ public class Tank : BaseEntity
     {
         CheckTankNameNotBeNull(tankName);
     }
+    private Tank()
+    {
+
+    }
     #endregion
 
     #region Methods
@@ -33,5 +37,7 @@ public class Tank : BaseEntity
         return 0;
     }
     #endregion
-
+    #region Relations
+    public IList<FishToTank> FishToTanks { get; set; }
+    #endregion
 }
