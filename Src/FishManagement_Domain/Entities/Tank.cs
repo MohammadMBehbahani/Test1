@@ -6,6 +6,7 @@ public class Tank : BaseEntity
 {
     #region Properties
     public string? TankName { get; private set; }
+    public double FishTotalFoodWeight { get; set; }
     #endregion
 
     #region Builder
@@ -22,7 +23,15 @@ public class Tank : BaseEntity
             throw new ArgumentException("Tank Name should have 140 character or not be null");
         this.TankName = tankName;
     }
-
+    public double SetFishTotalFoodWeight(double fishTotalFoodWeight)
+    {
+        if (!fishTotalFoodWeight.Equals(0))
+        {
+            this.FishTotalFoodWeight = fishTotalFoodWeight;
+            return this.FishTotalFoodWeight;
+        }
+        return 0;
+    }
     #endregion
 
 }
