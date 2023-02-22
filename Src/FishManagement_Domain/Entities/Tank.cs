@@ -19,7 +19,7 @@ public class Tank : BaseEntity
     private void CheckTankNameNotBeNull(string tankName)
     {
         if (string.IsNullOrEmpty(tankName) || tankName.Length > 140)
-            throw new Exception("Tank Name should have 140 character or not be null");
+            throw new ArgumentException("Tank Name should have 140 character or not be null");
         this.TankName = tankName;
     }
 
