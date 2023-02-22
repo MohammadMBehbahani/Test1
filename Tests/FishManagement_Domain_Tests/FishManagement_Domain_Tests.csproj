@@ -16,4 +16,8 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\FishManagement_Domain\FishManagement_Domain.csproj" />
+  </ItemGroup>
+
 </Project>

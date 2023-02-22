@@ -1,4 +1,6 @@
-﻿namespace FishManagement_Domain_Tests.Entities_Tests.Tank_Tests;
+﻿using FishManagement_Domain.Entities;
+
+namespace FishManagement_Domain_Tests.Entities_Tests.Tank_Tests;
 
 [TestFixture]
 public class TankEntity_Tests
@@ -15,4 +17,5 @@ public class TankEntity_Tests
         //Assert
         Assert.NotNull(tankInstanse);
     }
+
 }
