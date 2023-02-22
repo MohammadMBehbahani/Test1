@@ -7,7 +7,11 @@ public class Fish : BaseEntity
     public double FishFoodWeight { get; private set; }
     #endregion
     #region Builder
-
+    public Fish(string fishType,double foodweight)
+    {
+        CheckFishTypeValidation( fishType);
+        CheckFoodWeightValidation( foodweight);
+    }
     #endregion
     #region Methods
     public void CheckFishTypeValidation(string fishType)
