@@ -1,4 +1,6 @@
-﻿namespace FishManagement_Infrastructure.Services.SqlDbContext;
+﻿using FishManagement_Domain.Entities.Common;
+
+namespace FishManagement_Infrastructure.Services.SqlDbContext;
 public class SqlDbContext : DbContext, ISqlDbContext
 {
     public SqlDbContext(DbContextOptions<SqlDbContext> options) : base(options)
@@ -14,8 +16,13 @@ public class SqlDbContext : DbContext, ISqlDbContext
 
         base.OnModelCreating(builder);
     }
-    public async Task<int> SaveChangesAsync(CancellationToken cancellationToken)
+    public async Task<int> SaveChangesAsync()
     {
-        return await base.SaveChangesAsync(cancellationToken); ;
+        return await base.SaveChangesAsync();
+    }
+
+    public DbSet<T> GetSet<T>() where T : BaseEntity
+    {
+        return Set<T>();
     }
 }

@@ -7,5 +7,6 @@ global using Microsoft.Extensions.Configuration;
 global using FishManagement_Infrastructure.Services.SqlDbContext;
 global using FishManagement_Application.Common.Interfaces.SqlBaseRepository;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-
+global using FishManagement_Domain.Entities.Common;
+global using FishManagement_Infrastructure.Services.SqlBaseRepository;
+global using Microsoft.EntityFrameworkCore;

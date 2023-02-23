@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\FishManagement_Application\FishManagement_Application.csproj" />
     <ProjectReference Include="..\FishManagement_Infrastructure\FishManagement_Infrastructure.csproj" />
   </ItemGroup>

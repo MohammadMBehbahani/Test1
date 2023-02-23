@@ -10,7 +10,7 @@ public class Tank : BaseEntity
     #endregion
 
     #region Builder
-    public Tank(string tankName)
+    public Tank(string tankName) : this()
     {
         CheckTankNameNotBeNull(tankName);
     }
@@ -35,6 +35,11 @@ public class Tank : BaseEntity
             return this.FishTotalFoodWeight;
         }
         return 0;
+    }
+    public Tank UpdateClass(string tankName)
+    {
+        CheckTankNameNotBeNull(tankName);
+        return this;
     }
     #endregion
     #region Relations

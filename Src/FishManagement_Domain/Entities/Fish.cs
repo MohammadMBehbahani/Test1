@@ -7,7 +7,7 @@ public class Fish : BaseEntity
     public double FishFoodWeight { get; private set; }
     #endregion
     #region Builder
-    public Fish(string fishType, double foodweight)
+    public Fish(string fishType, double foodweight) : this()
     {
         CheckFishTypeValidation(fishType);
         CheckFoodWeightValidation(foodweight);
@@ -29,6 +29,12 @@ public class Fish : BaseEntity
         if (foodWeight is 0)
             throw new ArgumentException("Food weight muse be greater than 0");
         this.FishFoodWeight = foodWeight;
+    }
+    public Fish UpdateClass(string fishType, double foodweight)
+    {
+        CheckFishTypeValidation(fishType);
+        CheckFoodWeightValidation(foodweight);
+        return this;
     }
     #endregion
     #region Relations
