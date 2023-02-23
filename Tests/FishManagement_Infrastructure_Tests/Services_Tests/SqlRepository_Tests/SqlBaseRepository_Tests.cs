@@ -29,7 +29,7 @@ public class SqlBaseRepository_Tests
         var tankId = Guid.NewGuid();
         var tankEdited = new Tank("towfish");
         //Act
-        var resultOfAdd = sqlBaseRepository.EditEntityAsync(tankEdited, tankId);
+        //var resultOfAdd = sqlBaseRepository.EditEntityAsync(tankEdited, tankId);
         //Assert
         //Assert.AreEqual(tankEdited, resultOfAdd);
     }

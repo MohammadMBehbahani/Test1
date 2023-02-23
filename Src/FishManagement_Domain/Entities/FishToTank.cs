@@ -41,7 +41,7 @@ public class FishToTank : BaseEntity
     {
         if (fishId.Equals(Guid.Empty))
             throw new ArgumentException("fishId must not be null");
-        this.TankId = fishId;
+        this.FishId = fishId;
     }
     #endregion
 
